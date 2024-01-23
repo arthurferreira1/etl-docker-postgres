@@ -1,0 +1,23 @@
+[2024-01-23T22:35:17.962+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_postgres_dag.generate_random_data_task scheduled__2024-01-12T00:00:00+00:00 [queued]>
+[2024-01-23T22:35:17.987+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_postgres_dag.generate_random_data_task scheduled__2024-01-12T00:00:00+00:00 [queued]>
+[2024-01-23T22:35:17.987+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2024-01-23T22:35:18.014+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): generate_random_data_task> on 2024-01-12 00:00:00+00:00
+[2024-01-23T22:35:18.083+0000] {standard_task_runner.py:60} INFO - Started process 158 to run task
+[2024-01-23T22:35:18.103+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'example_postgres_dag', 'generate_random_data_task', 'scheduled__2024-01-12T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/salvaarquivo.py', '--cfg-path', '/tmp/tmpoam9ba95']
+[2024-01-23T22:35:18.108+0000] {standard_task_runner.py:88} INFO - Job 19: Subtask generate_random_data_task
+[2024-01-23T22:35:18.357+0000] {task_command.py:423} INFO - Running <TaskInstance: example_postgres_dag.generate_random_data_task scheduled__2024-01-12T00:00:00+00:00 [running]> on host 728782aa8dd3
+[2024-01-23T22:35:19.371+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_postgres_dag' AIRFLOW_CTX_TASK_ID='generate_random_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-01-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-12T00:00:00+00:00'
+[2024-01-23T22:35:19.375+0000] {python.py:201} INFO - Done. Returned value was:                    timestamp  value
+0 2024-01-23 22:35:19.373026     16
+1 2024-01-22 22:35:19.373034     92
+2 2024-01-21 22:35:19.373037      8
+3 2024-01-20 22:35:19.373038     72
+4 2024-01-19 22:35:19.373039     40
+5 2024-01-18 22:35:19.373040     45
+6 2024-01-17 22:35:19.373042     80
+7 2024-01-16 22:35:19.373043     42
+8 2024-01-15 22:35:19.373044     28
+9 2024-01-14 22:35:19.373045      1
+[2024-01-23T22:35:19.472+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=example_postgres_dag, task_id=generate_random_data_task, execution_date=20240112T000000, start_date=20240123T223517, end_date=20240123T223519
+[2024-01-23T22:35:19.571+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-01-23T22:35:19.692+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
